@@ -19,9 +19,22 @@
         <h2 id="title">Dj-Remix</h2>
         <h3 id="artist">PM Dj</h3>
         <div class="img_container">
-          <img src="images/pm_1.jpg" alt="" />
+          <img src="images/pm_1.jpg" alt=""/>
         </div>
         <audio src="music/pm_1.mp3"></audio>
+
+        <!-- progress bar -->
+        <div id="progress_container" class="progressbar_container">
+          <div class="progress_duration_meter">
+            <div id="current_time">0:00</div>
+            <div id="duration">00:00</div>
+          </div>
+          <div id="progress_div" class="progress_div">
+            <div class="progress" id="progress">
+            </div>
+          </div>
+        </div>
+
 
         <!-- controls -->
         <div class="music_controls">
@@ -31,121 +44,6 @@
         </div>
       </div>
     </div>
-    <script>
-      const img = document.querySelector("img");
-      const music = document.querySelector("audio");
-      const play = document.getElementById("play");
-      const artist = document.getElementById("artist");
-      const title = document.getElementById("title");
-      const prev = document.getElementById("prev");
-      const next = document.getElementById("next");
-
-      const songs = [
-        {
-          name: "pm_1",
-          title: "Dj-Remix",
-          artist: "PM Dj",
-        },
-        {
-          name: "pm_2",
-          title: "Kuda Jane",
-          artist: "KK,Shilpa Rao",
-        },
-        {
-          name: "pm_3",
-          title: "The Classic Arjit Sing Mashup",
-          artist: "Dj Kiran Kamath",
-        },
-        {
-          name: "pm_4",
-          title: "Main Agar",
-          artist: "Arjit Singh",
-        },
-        {
-          name: "pm_5",
-          title: "Danza Kuduro",
-          artist: "Lucenzo",
-        },
-        {
-          name: "pm_6",
-          title: "Ae Dil Hai Mushkil",
-          artist: "Sanam",
-        },
-        {
-          name: "pm_7",
-          title: "Ek Pyar Ka Nagma",
-          artist: "Arijit Singh",
-        },
-        {
-          name: "pm_8",
-          title: "Tere Sath Tu",
-          artist: "Jubin Nautiyal",
-        },
-        {
-          name: "pm_9",
-          title: "Tere Bin Ho Na Sakega Gujara",
-          artist: "K.K",
-        },
-        {
-          name: "pm_10",
-          title: "Lambiyaan Si Judaiyaan",
-          artist: "Arijit Singh,Shadab",
-        },
-        {
-          name: "pm_11",
-          title: "Main Tera Boyfriend",
-          artist: "Arijit Singh,Neha kakkar",
-        },
-      ];
-
-      let isPlaying = false;
-
-      const playMusic = () => {
-        isPlaying = true;
-        music.play();
-        play.classList.replace("fa-play", "fa-pause");
-        img.classList.add("anime");
-      };
-
-      const pauseMusic = () => {
-        isPlaying = false;
-        music.pause();
-        play.classList.replace("fa-pause", "fa-play");
-        img.classList.remove("anime");
-      };
-
-      play.addEventListener("click", () => {
-        isPlaying ? pauseMusic() : playMusic();
-      });
-
-      const loadSong = (songs) => {
-        title.textContent = songs.title;
-        artist.textContent = songs.artist;
-        music.src = "music/" + songs.name + ".mp3";
-        img.src = "images/" + songs.name + ".jpg";
-      };
-
-      songIndex = 0;
-    //   loadSong(songs[3]);
-
-      const nextSong = () => 
-      {
-        songIndex = (songIndex + 1) % songs.length;
-        loadSong(songs[songIndex])
-        playMusic();
-      }
-      const prevSong = () => 
-      {
-        {
-        songIndex = (songIndex - 1 + songs.length) % songs.length;
-        loadSong(songs[songIndex])
-        playMusic();
-      }
-      }
-
-      next.addEventListener('click',nextSong);
-      prev.addEventListener('click',prevSong);
-
-    </script>
+   <script src="js/script.js"></script>
   </body>
 </html>
