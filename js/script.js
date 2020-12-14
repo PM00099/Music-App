@@ -59,13 +59,28 @@ const songs = [
   },
   {
     name: "pm_10",
-    title: "Lambiyaan Si Judaiyaan",
-    artist: "Arijit Singh,Shadab",
+    title: "Baras Baras",
+    artist: "B. prak,Tanisk",
   },
   {
     name: "pm_11",
-    title: "Main Tera Boyfriend",
-    artist: "Arijit Singh,Neha kakkar",
+    title: "Dua Karo",
+    artist: "Arijit Singh,Sachin",
+  },
+   {
+    name: "pm_12",
+    title: "Fitrat",
+    artist: "Suyyash Rai",
+  },
+   {
+    name: "pm_13",
+    title: "Jinka Liya",
+    artist: "Neha kakkr,B.Prak",
+  },
+   {
+    name: "pm_14",
+    title: "Sukriya",
+    artist: "Jubin Nutiyal",
   },
 ];
 
